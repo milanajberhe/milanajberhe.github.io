@@ -389,3 +389,303 @@ footer {
 
     transform: translateY(-2px);
 }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Extracurriculars | Milana Berhe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="name">
+                <a href="index.html">Milana Berhe</a>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="research.html">Research</a>
+                <a href="projects.html">Projects</a>
+                <a href="extracurriculars.html" class="active">Extracurriculars</a>
+                <a href="cv.html">CV</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main>
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-heading">
+
+            <h1>Extracurriculars</h1>
+
+            <p>
+                A little more about the communities, organizations, and creative
+                projects that I spend my time on outside the classroom.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             UNDERGRADUATE ASTRONOMY SOCIETY
+             IMAGE LEFT
+             ========================= -->
+
+        <section class="activity-row">
+
+            <div class="activity-image">
+
+                <!-- Replace this image with your own -->
+                <img src="images/uas.jpg"
+                     alt="Undergraduate Astronomy Society">
+
+            </div>
+
+
+            <div class="activity-box">
+
+                <h2>Undergraduate Astronomy Society</h2>
+
+                <p class="activity-role">
+                    Community Development Officer · Marketing & Website Development Officer · Telescope Crew
+                </p>
+
+                <p>
+                    The Undergraduate Astronomy Society has given me the opportunity
+                    to combine my interests in astronomy, community building, mentorship,
+                    science communication, and web development.
+                </p>
+
+                <p>
+                    As Community Development Officer, I manage the Cluster Mentorship
+                    Program, which includes four clusters, 15 mentors, and more than
+                    100 participants.
+                </p>
+
+                <p>
+                    Previously, I served as Marketing and Website Development Officer,
+                    where I maintained the club website and created a biweekly newsletter
+                    for more than 600 subscribers.
+                </p>
+
+                <p>
+                    I also served on the telescope crew, where I was trained to operate
+                    Schmidt-Cassegrain, Newtonian, Dobsonian, and UC Berkeley's
+                    17-inch PlaneWave telescope.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DISCOVERY CUBE
+             IMAGE RIGHT
+             ========================= -->
+
+        <section class="activity-row reverse">
+
+            <div class="activity-image">
+
+                <!-- Replace this image with your own -->
+                <img src="images/discovery-cube.jpg"
+                     alt="Discovery Cube Museum">
+
+            </div>
+
+
+            <div class="activity-box">
+
+                <h2>Discovery Cube Museum</h2>
+
+                <p class="activity-role">
+                    Volunteer
+                </p>
+
+                <p>
+                    At Discovery Cube, I help make science accessible and exciting
+                    for museum visitors through hands-on science communication.
+                </p>
+
+                <p>
+                    My work has included aerospace, rocketry, atmospheric science,
+                    planetary science, physics, archaeology, paleontology, and marine
+                    life exhibits.
+                </p>
+
+                <p>
+                    I've also organized constellation-observation activities for
+                    museum visitors and spent more than 30 hours working behind
+                    marine-life tanks with sea stars, sharks, rays, sea snails,
+                    and anemones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BERKELEY POETRY REVIEW
+             IMAGE LEFT
+             ========================= -->
+
+        <section class="activity-row">
+
+            <div class="activity-image">
+
+                <!-- Replace this image with your own -->
+                <img src="images/poetry-review.jpg"
+                     alt="Berkeley Poetry Review">
+
+            </div>
+
+
+            <div class="activity-box">
+
+                <h2>Berkeley Poetry Review</h2>
+
+                <p class="activity-role">
+                    Contributing Editor
+                </p>
+
+                <p>
+                    As a contributing editor for Berkeley Poetry Review, I read and
+                    evaluated more than 40 poems each week and participated in weekly
+                    editorial discussions.
+                </p>
+
+                <p>
+                    The experience gave me a space to stay closely connected to
+                    creative writing while developing my editorial voice and engaging
+                    with the work of other writers.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             THE DAILY CALIFORNIAN
+             IMAGE RIGHT
+             ========================= -->
+
+        <section class="activity-row reverse">
+
+            <div class="activity-image">
+
+                <!-- Replace this image with your own -->
+                <img src="images/daily-cal.jpg"
+                     alt="The Daily Californian">
+
+            </div>
+
+
+            <div class="activity-box">
+
+                <h2>The Daily Californian</h2>
+
+                <p class="activity-role">
+                    Lifestyle Writer
+                </p>
+
+                <p>
+                    As a lifestyle writer for The Daily Californian, I wrote how-to
+                    articles, local guides, and quizzes for thousands of online readers.
+                </p>
+
+                <p>
+                    Writing for the Daily Cal gave me another way to explore communication
+                    outside of academic and scientific writing while learning how to
+                    create engaging work for a broad audience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             NEWSPACE@BERKELEY
+             IMAGE LEFT
+             ========================= -->
+
+        <section class="activity-row">
+
+            <div class="activity-image">
+
+                <!-- Replace this image with your own -->
+                <img src="images/newspace.jpg"
+                     alt="NewSpace at Berkeley">
+
+            </div>
+
+
+            <div class="activity-box">
+
+                <h2>NewSpace@Berkeley</h2>
+
+                <p class="activity-role">
+                    Designer & Writer
+                </p>
+
+                <p>
+                    NewSpace@Berkeley introduced me to the intersection of space,
+                    consulting, policy, design, and communication.
+                </p>
+
+                <p>
+                    I wrote biweekly newsletters for alumni, club members, and other
+                    subscribers, designed merchandise and graphics, and participated
+                    in the development of the club's emerging space-policy sector.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+        <p>© 2026 Milana Berhe</p>
+    </footer>
+
+</body>
+
+</html>
+
