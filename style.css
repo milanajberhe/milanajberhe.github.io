@@ -1,15 +1,65 @@
+/* =========================
+   WEBSITE COLORS
+   Change these colors to customize the whole website
+   ========================= */
+
+:root {
+    --pink: #f8d7e6;
+    --blue: #d9ecff;
+    --purple: #e4dcff;
+    --green: #dff4e4;
+
+    --background: #fffafd;
+    --text: #2d3142;
+}
+
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
 body {
     font-family: Arial, sans-serif;
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
+
+    background-color: var(--background);
+    color: var(--text);
 }
+
+
+/* =========================
+   HEADINGS
+   ========================= */
 
 h1 {
     font-size: 48px;
+    color: var(--purple);
 }
+
+h2 {
+    color: var(--blue);
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
 
 button {
     padding: 12px 20px;
     cursor: pointer;
+
+    background-color: var(--pink);
+    color: var(--text);
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--green);
 }
