@@ -478,11 +478,9 @@ main {
 /* Each pink research bubble */
 
 .research-card {
-    display: block;
-
     width: 100%;
 
-    background-color: var(--pink);
+    background-color: #f8d7e6;
 
     padding: 36px 40px;
 
