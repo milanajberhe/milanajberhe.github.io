@@ -888,3 +888,63 @@ main {
         font-size: 34px;
     }
 }
+
+/* =========================================
+   FINAL SITE-WIDE OVERRIDES
+   ========================================= */
+
+/* Background image on EVERY page */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-color: #fffafd !important;
+    background-image: url("images/background.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+
+/* Purple navigation bar on EVERY page */
+header {
+    background-color: #75619b !important;
+    border-bottom: none !important;
+}
+
+
+/* Keep the inside of the navbar transparent */
+.navbar {
+    background-color: transparent !important;
+}
+
+
+/* Milana Berhe in white */
+.name a {
+    color: white !important;
+}
+
+
+/* Navigation buttons */
+.nav-links a {
+    background-color: #f8d7e6 !important;
+    color: #2d3142 !important;
+}
+
+
+/* Active page button */
+.nav-links a.active {
+    background-color: #e4dcff !important;
+}
+
+
+/* Hover */
+.nav-links a:hover {
+    background-color: #e4dcff !important;
+}
