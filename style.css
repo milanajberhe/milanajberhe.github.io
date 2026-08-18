@@ -206,10 +206,15 @@ main {
     margin-top: 25px;
 
     display: flex;
+    align-items: center;
     gap: 15px;
+
+    flex-wrap: wrap;
 }
 
 .contact-links a {
+    display: inline-block;
+
     text-decoration: none;
 
     padding: 10px 18px;
@@ -222,14 +227,28 @@ main {
     transition: 0.2s;
 }
 
+
+/* Email */
+.contact-links a:nth-child(1) {
+    background-color: var(--purple);
+}
+
+
+/* LinkedIn */
 .contact-links a:nth-child(2) {
     background-color: var(--blue);
 }
 
+
+/* My Articles */
+.contact-links a:nth-child(3) {
+    background-color: var(--green);
+}
+
+
 .contact-links a:hover {
     transform: translateY(-2px);
 }
-
 
 /* =========================================
    FOOTER
