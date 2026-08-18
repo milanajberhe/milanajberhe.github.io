@@ -43,7 +43,8 @@ body {
    ========================================= */
 
 header {
-    border-bottom: 1px solid var(--purple);
+    background-color: #75619b;
+    border-bottom: none;
 }
 
 .navbar {
@@ -57,16 +58,23 @@ header {
     align-items: center;
 }
 
+
+/* NAME */
+
 .name a {
     font-size: 24px;
     font-weight: bold;
 
     text-decoration: none;
-    color: var(--text);
+
+    /* White text against purple navbar */
+    color: white;
 }
 
 
-/* Navigation buttons */
+/* =========================================
+   NAVIGATION BUTTONS
+   ========================================= */
 
 .nav-links {
     display: flex;
@@ -77,6 +85,7 @@ header {
     text-decoration: none;
     color: var(--text);
 
+    /* Pink buttons */
     background-color: var(--pink);
 
     padding: 9px 16px;
@@ -89,17 +98,20 @@ header {
     transition: 0.2s;
 }
 
+
+/* Hover */
+
 .nav-links a:hover {
     background-color: var(--purple);
-
     transform: translateY(-2px);
 }
+
+
+/* Current / active page */
 
 .nav-links a.active {
     background-color: var(--purple);
 }
-
-
 /* =========================================
    MAIN CONTENT
    ========================================= */
