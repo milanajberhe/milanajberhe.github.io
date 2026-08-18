@@ -28,6 +28,7 @@
 
 body {
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
 
     background-color: var(--background);
@@ -79,6 +80,7 @@ header {
     background-color: var(--pink);
 
     padding: 9px 16px;
+
     border-radius: 10px;
 
     font-size: 15px;
@@ -89,6 +91,7 @@ header {
 
 .nav-links a:hover {
     background-color: var(--purple);
+
     transform: translateY(-2px);
 }
 
@@ -110,7 +113,33 @@ main {
 
 
 /* =========================================
-   INTRO SECTION
+   PAGE HEADING
+   ========================================= */
+
+.page-heading {
+    max-width: 800px;
+
+    margin-bottom: 55px;
+}
+
+.page-heading h1 {
+    font-size: 52px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.page-heading p {
+    font-size: 19px;
+
+    color: var(--muted-text);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   HOMEPAGE INTRO
    ========================================= */
 
 .intro {
@@ -130,10 +159,10 @@ main {
 }
 
 .profile-image img {
+    display: block;
+
     width: 100%;
     height: auto;
-
-    display: block;
 
     border-radius: 18px;
 
@@ -142,11 +171,12 @@ main {
 
 
 /* =========================================
-   RIGHT SIDE / INTRO TEXT
+   INTRO TEXT
    ========================================= */
 
 .intro-text {
     flex: 1;
+
     min-width: 0;
 }
 
@@ -173,11 +203,13 @@ main {
 
 .about-box {
     display: block;
+
     width: 100%;
 
     background-color: var(--pink);
 
     padding: 28px 32px;
+
     margin-top: 25px;
     margin-bottom: 25px;
 
@@ -209,6 +241,7 @@ main {
 
     display: flex;
     align-items: center;
+
     gap: 15px;
 
     flex-wrap: wrap;
@@ -223,7 +256,6 @@ main {
 
     border-radius: 10px;
 
-    background-color: var(--purple);
     color: var(--text);
 
     transition: 0.2s;
@@ -231,18 +263,21 @@ main {
 
 
 /* Email */
+
 .contact-links a:nth-child(1) {
     background-color: var(--purple);
 }
 
 
 /* LinkedIn */
+
 .contact-links a:nth-child(2) {
     background-color: var(--blue);
 }
 
 
 /* My Articles */
+
 .contact-links a:nth-child(3) {
     background-color: var(--green);
 }
@@ -254,26 +289,12 @@ main {
 
 
 /* =========================================
-   FOOTER
-   ========================================= */
-
-footer {
-    text-align: center;
-
-    padding: 30px;
-
-    color: var(--muted-text);
-
-    font-size: 14px;
-}
-
-
-/* =========================================
    CV PAGE
    ========================================= */
 
 .cv-section {
     max-width: 800px;
+
     margin: 60px auto;
 
     text-align: center;
@@ -305,6 +326,7 @@ footer {
 .cv-buttons {
     display: flex;
     justify-content: center;
+
     gap: 15px;
 }
 
@@ -334,37 +356,8 @@ footer {
 
 
 /* =========================================
-   PAGE HEADING
-   ========================================= */
-
-.page-heading {
-    max-width: 800px;
-
-    margin-bottom: 70px;
-}
-
-.page-heading h1 {
-    font-size: 52px;
-
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.page-heading p {
-    font-size: 19px;
-
-    color: var(--muted-text);
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
    EXTRACURRICULAR PAGE
    ========================================= */
-
-
-/* Each activity row */
 
 .activity-row {
     display: flex;
@@ -378,7 +371,7 @@ footer {
 }
 
 
-/* Alternate image and text sides */
+/* Alternate image and text */
 
 .activity-row.reverse {
     flex-direction: row-reverse;
@@ -415,7 +408,7 @@ footer {
 
 
 /* =========================================
-   PINK ACTIVITY BOX
+   ACTIVITY PINK BOX
    ========================================= */
 
 .activity-box {
@@ -432,18 +425,12 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
 }
 
-
-/* Activity title */
-
 .activity-box h2 {
     font-size: 30px;
 
     margin-top: 0;
     margin-bottom: 5px;
 }
-
-
-/* Activity role */
 
 .activity-box .activity-role {
     color: var(--accent);
@@ -453,9 +440,6 @@ footer {
     margin-top: 0;
     margin-bottom: 18px;
 }
-
-
-/* Activity description */
 
 .activity-box p {
     font-size: 16px;
@@ -470,7 +454,7 @@ footer {
 
 /* =========================================
    INLINE LINKS
-   Example: Berkeley Life author page
+   Berkeley Life / Daily Cal links
    ========================================= */
 
 .inline-link {
@@ -487,6 +471,128 @@ footer {
 
 
 /* =========================================
+   RESEARCH PAGE
+   ========================================= */
+
+
+/* Each pink research bubble */
+
+.research-card {
+    display: block;
+
+    width: 100%;
+
+    background-color: var(--pink);
+
+    padding: 36px 40px;
+
+    margin-bottom: 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Research card heading */
+
+.research-card h2 {
+    font-size: 32px;
+
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+
+/* Research description heading */
+
+.research-card h3 {
+    font-size: 24px;
+
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+
+/* Research role */
+
+.research-role {
+    color: var(--accent);
+
+    font-weight: bold;
+
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+
+/* Research text */
+
+.research-card p {
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   RESEARCH IMAGE
+   ========================================= */
+
+.research-image {
+    width: 100%;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.research-image img {
+    display: block;
+
+    /*
+       Keeps the true proportions of the image
+       while preventing it from becoming wider
+       than the pink research card.
+    */
+
+    width: auto;
+    max-width: 100%;
+
+    height: auto;
+    max-height: 520px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   RESEARCH DESCRIPTION
+   ========================================= */
+
+.research-description {
+    padding-top: 25px;
+
+    border-top: 2px solid rgba(155, 126, 222, 0.25);
+}
+
+.research-description p {
+    margin-top: 0;
+}
+
+.research-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
    MEDIUM COMPUTER / TABLET
    ========================================= */
 
@@ -497,10 +603,14 @@ footer {
         padding-right: 22px;
     }
 
+
     main {
         padding-left: 22px;
         padding-right: 22px;
     }
+
+
+    /* Extracurriculars */
 
     .activity-row {
         gap: 30px;
@@ -515,6 +625,13 @@ footer {
     .activity-box {
         padding: 26px;
     }
+
+
+    /* Research */
+
+    .research-image img {
+        max-height: 450px;
+    }
 }
 
 
@@ -524,7 +641,10 @@ footer {
 
 @media (max-width: 800px) {
 
-    /* Navigation */
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .navbar {
         flex-direction: column;
@@ -539,7 +659,9 @@ footer {
     }
 
 
-    /* Homepage */
+    /* =========================
+       HOMEPAGE
+       ========================= */
 
     .intro {
         flex-direction: column;
@@ -581,12 +703,14 @@ footer {
     }
 
 
-    /* Page headings */
+    /* =========================
+       PAGE HEADINGS
+       ========================= */
 
     .page-heading {
         text-align: center;
 
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 
     .page-heading h1 {
@@ -594,7 +718,9 @@ footer {
     }
 
 
-    /* Extracurricular sections */
+    /* =========================
+       EXTRACURRICULARS
+       ========================= */
 
     .activity-row,
     .activity-row.reverse {
@@ -628,7 +754,42 @@ footer {
     }
 
 
-    /* CV */
+    /* =========================
+       RESEARCH
+       ========================= */
+
+    .research-card {
+        padding: 26px;
+
+        border-radius: 18px;
+    }
+
+    .research-card h2 {
+        font-size: 28px;
+    }
+
+    .research-card h3 {
+        font-size: 22px;
+    }
+
+    .research-image {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .research-image img {
+        width: 100%;
+
+        max-width: 100%;
+        max-height: none;
+
+        height: auto;
+    }
+
+
+    /* =========================
+       CV
+       ========================= */
 
     .cv-section {
         padding: 35px 25px;
@@ -666,6 +827,9 @@ footer {
         font-size: 14px;
     }
 
+
+    /* Homepage */
+
     .profile-image {
         width: 240px;
     }
@@ -674,6 +838,9 @@ footer {
         font-size: 36px;
     }
 
+
+    /* Extracurriculars */
+
     .activity-box {
         padding: 22px;
     }
@@ -681,146 +848,34 @@ footer {
     .activity-box h2 {
         font-size: 26px;
     }
-}
-
-/* =========================================
-   RESEARCH PAGE
-   ========================================= */
-
-.research-box {
-    display: block;
-
-    width: 100%;
-
-    background-color: #f8d7e6;
-
-    padding: 35px 40px;
-
-    margin-top: 25px;
-    margin-bottom: 45px;
-
-    border-radius: 18px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
-}
 
 
-/* RESEARCH TITLE */
+    /* Research */
 
-.research-box h2 {
-    font-size: 32px;
-
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-
-/* RESEARCH ROLE */
-
-.research-role {
-    color: #9b7ede;
-
-    font-weight: bold;
-
-    margin-top: 0;
-    margin-bottom: 22px;
-}
-
-
-/* NORMAL TEXT */
-
-.research-box p {
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-
-/* =========================================
-   IMAGE + DESCRIPTION
-   ========================================= */
-
-.research-content {
-    display: flex;
-
-    align-items: center;
-
-    gap: 35px;
-
-    margin-top: 30px;
-
-    padding-top: 30px;
-
-    border-top: 2px solid rgba(155, 126, 222, 0.25);
-}
-
-
-/* RESEARCH IMAGE */
-
-.research-image {
-    flex: 0 1 40%;
-
-    max-width: 350px;
-}
-
-.research-image img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    border-radius: 14px;
-
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
-}
-
-
-/* RESEARCH DESCRIPTION */
-
-.research-description {
-    flex: 1;
-
-    min-width: 0;
-}
-
-.research-description h3 {
-    font-size: 24px;
-
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.research-description p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-/* =========================================
-   RESEARCH PAGE - MOBILE
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .research-box {
-        padding: 26px;
+    .research-card {
+        padding: 22px;
     }
 
-    .research-box h2 {
-        font-size: 28px;
+    .research-card h2 {
+        font-size: 26px;
     }
 
-    .research-content {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 25px;
+    .research-card h3 {
+        font-size: 21px;
     }
 
-    .research-image {
-        width: 100%;
-
-        max-width: 450px;
+    .research-card p {
+        font-size: 16px;
     }
 
+
+    /* CV */
+
+    .cv-section {
+        padding: 28px 20px;
+    }
+
+    .cv-section h1 {
+        font-size: 34px;
+    }
 }
