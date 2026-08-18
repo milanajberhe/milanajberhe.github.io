@@ -682,3 +682,145 @@ footer {
         font-size: 26px;
     }
 }
+
+/* =========================================
+   RESEARCH PAGE
+   ========================================= */
+
+.research-box {
+    display: block;
+
+    width: 100%;
+
+    background-color: #f8d7e6;
+
+    padding: 35px 40px;
+
+    margin-top: 25px;
+    margin-bottom: 45px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+/* RESEARCH TITLE */
+
+.research-box h2 {
+    font-size: 32px;
+
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+
+/* RESEARCH ROLE */
+
+.research-role {
+    color: #9b7ede;
+
+    font-weight: bold;
+
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+
+/* NORMAL TEXT */
+
+.research-box p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   IMAGE + DESCRIPTION
+   ========================================= */
+
+.research-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-top: 30px;
+
+    padding-top: 30px;
+
+    border-top: 2px solid rgba(155, 126, 222, 0.25);
+}
+
+
+/* RESEARCH IMAGE */
+
+.research-image {
+    flex: 0 1 40%;
+
+    max-width: 350px;
+}
+
+.research-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* RESEARCH DESCRIPTION */
+
+.research-description {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.research-description h3 {
+    font-size: 24px;
+
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.research-description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   RESEARCH PAGE - MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .research-box {
+        padding: 26px;
+    }
+
+    .research-box h2 {
+        font-size: 28px;
+    }
+
+    .research-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .research-image {
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+}
