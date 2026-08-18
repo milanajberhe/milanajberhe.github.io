@@ -545,27 +545,19 @@ main {
     margin-top: 30px;
     margin-bottom: 30px;
 
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .research-image img {
     display: block;
 
-    /*
-       Keeps the true proportions of the image
-       while preventing it from becoming wider
-       than the pink research card.
-    */
-
-    width: auto;
+    /* Controls the image size */
+    width: 550px;
     max-width: 100%;
 
+    /* Keeps original proportions */
     height: auto;
-    max-height: 520px;
-
-    margin: 0 auto;
-
-    object-fit: contain;
 
     border-radius: 16px;
 
