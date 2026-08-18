@@ -326,3 +326,66 @@ footer {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+/* =========================================
+   CV PAGE
+   ========================================= */
+
+.cv-section {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+
+    background-color: var(--pink);
+
+    padding: 50px;
+
+    border-radius: 18px;
+}
+
+.cv-section h1 {
+    font-size: 48px;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.cv-section p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* CV BUTTON */
+
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cv-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: var(--purple);
+    color: var(--text);
+
+    padding: 12px 24px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.cv-button:hover {
+    background-color: var(--blue);
+
+    transform: translateY(-2px);
+}
