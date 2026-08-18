@@ -77,7 +77,15 @@ header {
     /* White text against purple navbar */
     color: white;
 }
+/* Decorative symbols beside name */
 
+.name-symbols {
+    font-weight: normal;
+    font-size: 22px;
+    margin-left: 8px;
+    letter-spacing: 2px;
+    color: white;
+}
 
 /* =========================================
    NAVIGATION BUTTONS
