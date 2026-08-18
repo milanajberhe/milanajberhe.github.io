@@ -361,6 +361,9 @@ main {
 
     border-radius: 10px;
 
+    /* Dark purple outline */
+    border: 3px solid #5f4b8b;
+
     font-size: 17px;
     font-weight: 500;
 
@@ -370,8 +373,12 @@ main {
 .cv-button:hover {
     background-color: var(--blue);
 
+    /* Keep dark purple outline when hovering */
+    border-color: #5f4b8b;
+
     transform: translateY(-2px);
 }
+
 
 
 /* =========================================
