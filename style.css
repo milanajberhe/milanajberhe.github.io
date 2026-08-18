@@ -903,7 +903,12 @@ body {
     margin: 0;
 
     background-color: #fffafd !important;
-    background-image: url("images/background.png") !important;
+   background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+    ),
+    url("images/background.png") !important;
 
     background-size: cover !important;
     background-position: center center !important;
