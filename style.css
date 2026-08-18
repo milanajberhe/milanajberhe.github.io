@@ -79,7 +79,6 @@ header {
     background-color: var(--pink);
 
     padding: 9px 16px;
-
     border-radius: 10px;
 
     font-size: 15px;
@@ -173,18 +172,21 @@ main {
    ========================================= */
 
 .about-box {
+    display: block;
+    width: 100%;
+
     background-color: var(--pink);
 
-    padding: 25px 30px;
+    padding: 28px 32px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     border-radius: 18px;
-
-    width: 100%;
 }
 
 .about-box h2 {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 
     font-size: 30px;
 }
@@ -250,6 +252,7 @@ main {
     transform: translateY(-2px);
 }
 
+
 /* =========================================
    FOOTER
    ========================================= */
@@ -266,93 +269,13 @@ footer {
 
 
 /* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .intro {
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 35px;
-    }
-
-    .profile-image {
-        flex: none;
-
-        width: 280px;
-    }
-
-    .intro-text {
-        width: 100%;
-    }
-
-    .intro-text h1 {
-        font-size: 40px;
-
-        text-align: center;
-    }
-
-    .subtitle {
-        text-align: center;
-    }
-
-    .about-box {
-        text-align: left;
-    }
-
-    .contact-links {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-/* =========================================
-   ABOUT ME PINK BOX - FINAL OVERRIDE
-   ========================================= */
-
-.about-box {
-    display: block;
-    width: 100%;
-
-    background-color: #f8d7e6;
-
-    padding: 28px 32px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-    border-radius: 18px;
-}
-
-.about-box h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.about-box p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* =========================================
    CV PAGE
    ========================================= */
 
 .cv-section {
     max-width: 800px;
     margin: 60px auto;
+
     text-align: center;
 
     background-color: var(--pink);
@@ -409,38 +332,81 @@ footer {
     transform: translateY(-2px);
 }
 
+
 /* =========================================
-   EXTRACURRICULAR PAGE - FINAL STYLES
+   PAGE HEADING
    ========================================= */
 
-/* Each extracurricular section */
+.page-heading {
+    max-width: 800px;
+
+    margin-bottom: 70px;
+}
+
+.page-heading h1 {
+    font-size: 52px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.page-heading p {
+    font-size: 19px;
+
+    color: var(--muted-text);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   EXTRACURRICULAR PAGE
+   ========================================= */
+
+
+/* Each activity row */
+
 .activity-row {
     display: flex;
     align-items: center;
-    gap: 50px;
+
+    gap: clamp(25px, 4vw, 55px);
 
     width: 100%;
-    margin-bottom: 80px;
+
+    margin-bottom: 90px;
 }
 
-/* Alternate image/text sides */
+
+/* Alternate image and text sides */
+
 .activity-row.reverse {
     flex-direction: row-reverse;
 }
 
 
-/* IMAGE SIDE */
+/* =========================================
+   ACTIVITY IMAGE
+   ========================================= */
 
 .activity-image {
-    flex: 0 0 42%;
+    flex: 0 1 42%;
+
+    width: 100%;
+    max-width: 420px;
+
+    min-width: 0;
 }
 
 .activity-image img {
-    width: 100%;
-    height: 350px;
-
-    object-fit: cover;
     display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
 
     border-radius: 18px;
 
@@ -448,15 +414,18 @@ footer {
 }
 
 
-/* PINK BOX SIDE */
+/* =========================================
+   PINK ACTIVITY BOX
+   ========================================= */
 
 .activity-box {
-    flex: 1;
+    flex: 1 1 0;
 
-    /* Explicit pink so we know it works */
-    background-color: #f8d7e6;
+    min-width: 0;
 
-    padding: 32px 36px;
+    background-color: var(--pink);
+
+    padding: clamp(24px, 3vw, 36px);
 
     border-radius: 18px;
 
@@ -464,7 +433,7 @@ footer {
 }
 
 
-/* TITLE */
+/* Activity title */
 
 .activity-box h2 {
     font-size: 30px;
@@ -474,10 +443,10 @@ footer {
 }
 
 
-/* ROLE */
+/* Activity role */
 
 .activity-box .activity-role {
-    color: #9b7ede;
+    color: var(--accent);
 
     font-weight: bold;
 
@@ -486,10 +455,11 @@ footer {
 }
 
 
-/* DESCRIPTION */
+/* Activity description */
 
 .activity-box p {
     font-size: 16px;
+
     line-height: 1.7;
 }
 
@@ -498,26 +468,217 @@ footer {
 }
 
 
-/* MOBILE */
+/* =========================================
+   INLINE LINKS
+   Example: Berkeley Life author page
+   ========================================= */
+
+.inline-link {
+    color: var(--accent);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MEDIUM COMPUTER / TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    main {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .activity-row {
+        gap: 30px;
+    }
+
+    .activity-image {
+        flex-basis: 38%;
+
+        max-width: 360px;
+    }
+
+    .activity-box {
+        padding: 26px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 800px) {
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Homepage */
+
+    .intro {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+    .profile-image {
+        flex: none;
+
+        width: 280px;
+        max-width: 100%;
+    }
+
+    .intro-text {
+        width: 100%;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+
+    .about-box {
+        text-align: left;
+    }
+
+    .contact-links {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* Page headings */
+
+    .page-heading {
+        text-align: center;
+
+        margin-bottom: 50px;
+    }
+
+    .page-heading h1 {
+        font-size: 40px;
+    }
+
+
+    /* Extracurricular sections */
 
     .activity-row,
     .activity-row.reverse {
         flex-direction: column;
+
+        align-items: center;
+
         gap: 25px;
+
+        margin-bottom: 60px;
     }
 
     .activity-image {
-        width: 100%;
         flex: none;
+
+        width: 100%;
+        max-width: 500px;
     }
 
     .activity-image img {
-        height: 300px;
+        width: 100%;
+        height: auto;
+
+        max-width: 100%;
     }
 
     .activity-box {
         width: 100%;
+
+        padding: 26px;
+    }
+
+
+    /* CV */
+
+    .cv-section {
+        padding: 35px 25px;
+
+        margin: 30px auto;
+    }
+
+    .cv-section h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 45px 18px;
+    }
+
+    .navbar {
+        padding: 20px 18px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 240px;
+    }
+
+    .intro-text h1 {
+        font-size: 36px;
+    }
+
+    .activity-box {
+        padding: 22px;
+    }
+
+    .activity-box h2 {
+        font-size: 26px;
     }
 }
