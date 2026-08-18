@@ -905,9 +905,6 @@ main {
     margin-bottom: 80px;
 }
 
-
-/* Pink description box above photos */
-
 .personal-description {
     width: 100%;
     margin-bottom: 20px;
@@ -915,7 +912,7 @@ main {
 
 
 /* =========================================
-   PERSONAL IMAGE GALLERY
+   PERSONAL IMAGE GALLERIES
    ========================================= */
 
 .personal-gallery {
@@ -925,31 +922,27 @@ main {
 }
 
 
-/* Two photos */
-
+/* Two images side by side */
 .personal-gallery.two-images {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 
-/* Three photos */
-
+/* Three images side by side */
 .personal-gallery.three-images {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 
 /* =========================================
-   IMAGE + HOVER CAPTION
+   INDIVIDUAL IMAGE CONTAINER
    ========================================= */
 
 .caption-image {
     position: relative;
 
     width: 100%;
-
-    /* Keeps images from becoming huge */
-    height: 220px;
+    height: 190px;
 
     overflow: hidden;
 
@@ -962,18 +955,22 @@ main {
 /* Actual image */
 
 .caption-image img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    display: block;
+    border-radius: 16px;
 
     transition: transform 0.3s ease;
 }
 
 
-/* Caption overlay */
+/* =========================================
+   HOVER CAPTION
+   ========================================= */
 
 .image-caption {
     position: absolute;
@@ -982,9 +979,9 @@ main {
     right: 0;
     bottom: 0;
 
-    padding: 14px 12px;
+    padding: 12px 14px;
 
-    background: rgba(45, 35, 65, 0.88);
+    background-color: rgba(45, 35, 65, 0.88);
 
     color: white;
 
@@ -1002,15 +999,11 @@ main {
 }
 
 
-/* Show caption on hover */
-
 .caption-image:hover .image-caption {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-/* Slight image zoom */
 
 .caption-image:hover img {
     transform: scale(1.03);
@@ -1024,7 +1017,7 @@ main {
 @media (max-width: 900px) {
 
     .caption-image {
-        height: 190px;
+        height: 170px;
     }
 
 }
@@ -1042,11 +1035,7 @@ main {
     }
 
     .caption-image {
-        height: 260px;
-    }
-
-    .personal-section {
-        margin-bottom: 55px;
+        height: 240px;
     }
 
     .image-caption {
