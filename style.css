@@ -953,3 +953,17 @@ header {
 .nav-links a:hover {
     background-color: #e4dcff !important;
 }
+
+/* Make page titles white on every page */
+.page-heading h1 {
+    color: white !important;
+}
+
+/* Page titles */
+.page-heading p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+/* Page descriptions under titles */
+.page-heading p {
+    color: white !important;
+}
