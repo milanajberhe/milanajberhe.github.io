@@ -897,6 +897,166 @@ main {
 }
 
 /* =========================================
+   PERSONAL PAGE
+   ========================================= */
+
+.personal-section {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+
+/* Pink description box above photos */
+
+.personal-description {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PERSONAL IMAGE GALLERY
+   ========================================= */
+
+.personal-gallery {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+}
+
+
+/* Two photos */
+
+.personal-gallery.two-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+/* Three photos */
+
+.personal-gallery.three-images {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* =========================================
+   IMAGE + HOVER CAPTION
+   ========================================= */
+
+.caption-image {
+    position: relative;
+
+    width: 100%;
+
+    /* Keeps images from becoming huge */
+    height: 220px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Actual image */
+
+.caption-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Caption overlay */
+
+.image-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 14px 12px;
+
+    background: rgba(45, 35, 65, 0.88);
+
+    color: white;
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(100%);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Show caption on hover */
+
+.caption-image:hover .image-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Slight image zoom */
+
+.caption-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .caption-image {
+        height: 190px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .personal-gallery.two-images,
+    .personal-gallery.three-images {
+        grid-template-columns: 1fr;
+    }
+
+    .caption-image {
+        height: 260px;
+    }
+
+    .personal-section {
+        margin-bottom: 55px;
+    }
+
+    .image-caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================================
    FINAL SITE-WIDE OVERRIDES
    ========================================= */
 
