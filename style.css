@@ -1,7 +1,7 @@
-/* =========================
-   WEBSITE COLORS
-   Change these colors to customize the whole website
-   ========================= */
+/* =========================================
+   COLOR PALETTE
+   Change these colors anytime
+   ========================================= */
 
 :root {
     --pink: #f8d7e6;
@@ -11,55 +11,252 @@
 
     --background: #fffafd;
     --text: #2d3142;
+    --muted-text: #666666;
+
+    --accent: #9b7ede;
+    --link: #6178b8;
 }
 
 
-/* =========================
-   MAIN PAGE
-   ========================= */
+/* =========================================
+   GENERAL PAGE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 
     background-color: var(--background);
     color: var(--text);
+
+    line-height: 1.6;
 }
 
 
-/* =========================
-   HEADINGS
-   ========================= */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
-h1 {
-    font-size: 48px;
-    color: var(--purple);
+header {
+    border-bottom: 1px solid var(--purple);
 }
 
-h2 {
-    color: var(--blue);
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 24px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.name a {
+    font-size: 24px;
+    font-weight: bold;
 
-/* =========================
-   BUTTONS
-   ========================= */
+    text-decoration: none;
+    color: var(--text);
+}
 
-button {
-    padding: 12px 20px;
-    cursor: pointer;
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
 
-    background-color: var(--pink);
+.nav-links a {
+    text-decoration: none;
     color: var(--text);
 
-    border: none;
-    border-radius: 10px;
-
-    font-size: 16px;
+    font-size: 15px;
 }
 
-button:hover {
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 70px 30px;
+}
+
+
+/* =========================================
+   INTRO SECTION
+   ========================================= */
+
+.intro {
+    display: flex;
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-image {
+    flex: 0 0 320px;
+}
+
+.profile-image img {
+    width: 100%;
+
+    border-radius: 18px;
+
+    display: block;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* INTRO TEXT */
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: 52px;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+
+    color: var(--accent);
+
+    margin-bottom: 28px;
+}
+
+.intro-text p {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   CONTACT LINKS
+   ========================================= */
+
+.contact-links {
+    margin-top: 30px;
+
+    display: flex;
+    gap: 18px;
+}
+
+.contact-links a {
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background-color: var(--purple);
+    color: var(--text);
+
+    transition: 0.2s;
+}
+
+.contact-links a:nth-child(2) {
+    background-color: var(--blue);
+}
+
+.contact-links a:nth-child(3) {
     background-color: var(--green);
+}
+
+.contact-links a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about-section {
+    margin-top: 100px;
+
+    padding: 40px;
+
+    background-color: var(--pink);
+
+    border-radius: 16px;
+}
+
+.about-section h2 {
+    margin-top: 0;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: var(--muted-text);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .intro {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .profile-image {
+        flex: none;
+
+        width: 260px;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+    }
+
+    .contact-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
