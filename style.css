@@ -299,3 +299,30 @@ footer {
         flex-wrap: wrap;
     }
 }
+
+/* =========================================
+   ABOUT ME PINK BOX - FINAL OVERRIDE
+   ========================================= */
+
+.about-box {
+    display: block;
+    width: 100%;
+
+    background-color: #f8d7e6;
+
+    padding: 28px 32px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+}
+
+.about-box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
