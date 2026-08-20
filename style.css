@@ -1087,261 +1087,150 @@ main {
    PROJECTS PAGE
    ========================================= */
 
-/* Two project cards side by side */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 30px;
-
+.project-section {
     width: 100%;
+
+    margin-bottom: 90px;
+}
+
+
+/* Pink project bubble */
+
+.project-description {
+    width: 100%;
+
+    margin-bottom: 22px;
 }
 
 
 /* =========================================
-   PROJECT FLIP CARD
+   PROJECT FEATURE IMAGE
    ========================================= */
 
-.project-card {
+.project-feature-image {
     width: 100%;
 
-    /* Gives enough room for image + description */
-    height: 520px;
+    margin-bottom: 22px;
 
-    perspective: 1200px;
-
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 
-.project-card-inner {
-    position: relative;
+.project-feature-image img {
+    display: block;
 
-    width: 100%;
-    height: 100%;
+    width: auto;
+    max-width: 100%;
 
-    transition: transform 0.65s ease;
+    height: auto;
+    max-height: 430px;
 
-    transform-style: preserve-3d;
-}
+    object-fit: contain;
 
-
-/* Flip on desktop hover */
-
-.project-card:hover .project-card-inner {
-    transform: rotateY(180deg);
-}
-
-
-/* Flip when clicked */
-
-.project-card.flipped .project-card-inner {
-    transform: rotateY(180deg);
-}
-
-
-/* Keyboard accessibility */
-
-.project-card:focus-visible {
-    outline: 3px solid #75619b;
-    outline-offset: 5px;
-
-    border-radius: 20px;
-}
-
-
-/* =========================================
-   FRONT + BACK
-   ========================================= */
-
-.project-card-front,
-.project-card-back {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: var(--pink);
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    border-radius: 18px;
 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 
 /* =========================================
-   FRONT OF PROJECT CARD
+   PROJECT PDF
    ========================================= */
 
-.project-card-front {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Project image */
-
-.project-card-front img {
-    display: block;
-
-    width: 100%;
-    height: 250px;
-
-    object-fit: cover;
-}
-
-
-/* Text underneath image */
-
-.project-front-text {
-    flex: 1;
-
-    padding: 24px 26px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-.project-front-text h2 {
-    font-size: 25px;
-
-    margin-top: 0;
-    margin-bottom: 10px;
-
-    line-height: 1.25;
-}
-
-
-.project-front-text p {
-    font-size: 15px;
-    line-height: 1.6;
-
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-
-.flip-hint {
-    display: block;
-
-    margin-top: auto;
-
-    font-size: 13px;
-
-    color: var(--accent);
-
-    font-weight: 600;
-}
-
-
-/* =========================================
-   BACK OF PROJECT CARD
-   ========================================= */
-
-.project-card-back {
-    transform: rotateY(180deg);
-
-    padding: 32px;
-
-    display: flex;
-    flex-direction: column;
-
-    overflow: auto;
-}
-
-
-.project-card-back h2 {
-    font-size: 27px;
-
-    margin-top: 0;
-    margin-bottom: 15px;
-
-    line-height: 1.25;
-}
-
-
-.project-card-back p {
-    font-size: 15px;
-
-    line-height: 1.65;
-
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-
-/* =========================================
-   PDF INSIDE PROJECT CARD
-   ========================================= */
-
-.project-card-back-pdf {
-    justify-content: flex-start;
-
-    overflow: hidden;
-}
-
-
-.project-pdf {
+.project-pdf-container {
     width: 100%;
 
-    flex: 1;
+    height: 600px;
 
-    min-height: 0;
-
-    margin-top: 8px;
+    margin-top: 20px;
+    margin-bottom: 18px;
 
     background-color: white;
 
-    border-radius: 12px;
+    border: 3px solid #75619b;
+
+    border-radius: 18px;
 
     overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 
-.project-pdf iframe {
+.project-pdf-container iframe {
     display: block;
 
     width: 100%;
     height: 100%;
 
-    min-height: 330px;
-
     border: none;
-
-    background-color: white;
 }
 
 
 /* =========================================
-   PROJECT WEBSITE LINK PREVIEW
+   PROJECT BUTTON
    ========================================= */
 
-.project-link-preview {
-    display: block;
+.project-buttons {
+    display: flex;
 
-    margin-top: 15px;
+    justify-content: center;
+}
 
-    padding: 18px;
+
+.project-button {
+    display: inline-block;
+
+    padding: 11px 20px;
 
     background-color: var(--purple);
 
-    border: 2px solid #75619b;
+    border: 3px solid #75619b;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
     color: var(--text);
 
     text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.project-button:hover {
+    background-color: var(--blue);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   WEBSITE PREVIEW
+   ========================================= */
+
+.website-preview {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 30px;
+
+    background-color: var(--pink);
+
+    border: 3px solid #75619b;
+
+    border-radius: 18px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 
     transition:
         transform 0.2s ease,
@@ -1349,139 +1238,91 @@ main {
 }
 
 
-.project-link-preview:hover {
-    background-color: var(--blue);
+.website-preview:hover {
+    background-color: var(--purple);
 
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 
-.project-link-title {
+.website-preview-label {
     display: block;
 
-    font-size: 17px;
+    margin-bottom: 8px;
 
-    font-weight: 700;
-}
-
-
-.project-link-url {
-    display: block;
-
-    margin-top: 4px;
+    color: var(--accent);
 
     font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.website-preview h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    font-size: 26px;
+}
+
+
+.website-preview p {
+    margin-top: 0;
+    margin-bottom: 15px;
 
     color: var(--muted-text);
+
+    font-size: 15px;
 }
 
 
-.project-link-action {
-    display: block;
-
-    margin-top: 10px;
-
-    font-size: 14px;
-
-    font-weight: 600;
+.website-preview-action {
+    font-weight: 700;
 
     color: #5f4b8b;
 }
 
 
 /* =========================================
-   PROJECTS — TABLET
+   PROJECTS - TABLET
    ========================================= */
 
 @media (max-width: 900px) {
 
-    .projects-grid {
-        gap: 20px;
-    }
-
-    .project-card {
-        height: 500px;
-    }
-
-    .project-card-front img {
-        height: 220px;
-    }
-
-}
-
-
-/* =========================================
-   PROJECTS — MOBILE
-   ========================================= */
-
-@media (max-width: 700px) {
-
-    /* One project per row */
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-
-    .project-card {
-        height: 500px;
-    }
-
-
-    /*
-       Phones don't really have hover,
-       so disable hover flipping.
-       Clicking/tapping still works.
-    */
-
-    .project-card:hover .project-card-inner {
-        transform: none;
-    }
-
-
-    .project-card.flipped .project-card-inner {
-        transform: rotateY(180deg);
-    }
-
-
-    .project-card-front img {
-        height: 240px;
-    }
-
-}
-
-
-/* =========================================
-   PROJECTS — SMALL PHONES
-   ========================================= */
-
-@media (max-width: 450px) {
-
-    .project-card {
+    .project-pdf-container {
         height: 520px;
     }
 
-
-    .project-card-front img {
-        height: 220px;
+    .project-feature-image img {
+        max-height: 360px;
     }
 
+}
 
-    .project-card-back {
+
+/* =========================================
+   PROJECTS - MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .project-section {
+        margin-bottom: 60px;
+    }
+
+    .project-feature-image img {
+        width: 100%;
+        max-height: none;
+    }
+
+    .project-pdf-container {
+        height: 450px;
+    }
+
+    .website-preview {
         padding: 24px;
-    }
-
-
-    .project-front-text {
-        padding: 22px;
-    }
-
-
-    .project-front-text h2,
-    .project-card-back h2 {
-        font-size: 23px;
     }
 
 }
