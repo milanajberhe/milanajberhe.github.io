@@ -1084,6 +1084,408 @@ main {
 
 }
 /* =========================================
+   PROJECTS PAGE
+   ========================================= */
+
+/* Two project cards side by side */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   PROJECT FLIP CARD
+   ========================================= */
+
+.project-card {
+    width: 100%;
+
+    /* Gives enough room for image + description */
+    height: 520px;
+
+    perspective: 1200px;
+
+    cursor: pointer;
+}
+
+
+.project-card-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.65s ease;
+
+    transform-style: preserve-3d;
+}
+
+
+/* Flip on desktop hover */
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Flip when clicked */
+
+.project-card.flipped .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Keyboard accessibility */
+
+.project-card:focus-visible {
+    outline: 3px solid #75619b;
+    outline-offset: 5px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   FRONT + BACK
+   ========================================= */
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--pink);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   FRONT OF PROJECT CARD
+   ========================================= */
+
+.project-card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Project image */
+
+.project-card-front img {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+
+/* Text underneath image */
+
+.project-front-text {
+    flex: 1;
+
+    padding: 24px 26px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.project-front-text h2 {
+    font-size: 25px;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    line-height: 1.25;
+}
+
+
+.project-front-text p {
+    font-size: 15px;
+    line-height: 1.6;
+
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+
+.flip-hint {
+    display: block;
+
+    margin-top: auto;
+
+    font-size: 13px;
+
+    color: var(--accent);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BACK OF PROJECT CARD
+   ========================================= */
+
+.project-card-back {
+    transform: rotateY(180deg);
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: auto;
+}
+
+
+.project-card-back h2 {
+    font-size: 27px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    line-height: 1.25;
+}
+
+
+.project-card-back p {
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PDF INSIDE PROJECT CARD
+   ========================================= */
+
+.project-card-back-pdf {
+    justify-content: flex-start;
+
+    overflow: hidden;
+}
+
+
+.project-pdf {
+    width: 100%;
+
+    flex: 1;
+
+    min-height: 0;
+
+    margin-top: 8px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.project-pdf iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 330px;
+
+    border: none;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   PROJECT WEBSITE LINK PREVIEW
+   ========================================= */
+
+.project-link-preview {
+    display: block;
+
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background-color: var(--purple);
+
+    border: 2px solid #75619b;
+
+    border-radius: 14px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.project-link-preview:hover {
+    background-color: var(--blue);
+
+    transform: translateY(-2px);
+}
+
+
+.project-link-title {
+    display: block;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.project-link-url {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 14px;
+
+    color: var(--muted-text);
+}
+
+
+.project-link-action {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #5f4b8b;
+}
+
+
+/* =========================================
+   PROJECTS — TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .project-card {
+        height: 500px;
+    }
+
+    .project-card-front img {
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================
+   PROJECTS — MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* One project per row */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .project-card {
+        height: 500px;
+    }
+
+
+    /*
+       Phones don't really have hover,
+       so disable hover flipping.
+       Clicking/tapping still works.
+    */
+
+    .project-card:hover .project-card-inner {
+        transform: none;
+    }
+
+
+    .project-card.flipped .project-card-inner {
+        transform: rotateY(180deg);
+    }
+
+
+    .project-card-front img {
+        height: 240px;
+    }
+
+}
+
+
+/* =========================================
+   PROJECTS — SMALL PHONES
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    .project-card {
+        height: 520px;
+    }
+
+
+    .project-card-front img {
+        height: 220px;
+    }
+
+
+    .project-card-back {
+        padding: 24px;
+    }
+
+
+    .project-front-text {
+        padding: 22px;
+    }
+
+
+    .project-front-text h2,
+    .project-card-back h2 {
+        font-size: 23px;
+    }
+
+}
+/* =========================================
    FINAL SITE-WIDE OVERRIDES
    ========================================= */
 
