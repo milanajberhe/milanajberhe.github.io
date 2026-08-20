@@ -1,145 +1,237 @@
-<section class="projects-grid">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Milana Berhe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/favicon-circle.png">
+</head>
+
+<body>
 
     <!-- =========================
-         PYTHON DECAL FINAL PROJECT
+         NAVIGATION
          ========================= -->
 
-    <div class="project-card" tabindex="0">
+    <header>
+        <nav class="navbar">
 
-        <div class="project-card-inner">
-
-            <!-- FRONT -->
-            <div class="project-card-front">
-
-                <img
-                    src="decal_project.png"
-                    alt="Python DeCal final project"
-                >
-
-                <div class="project-front-text">
-
-                    <h2>Python DeCal Final Project (Spring 2025)</h2>
-
-                    <p>
-                        My final project analyzed the mass-luminosity relation
-                        of over 30,000 stars using NASA data. I found that the
-                        line of best fit closely followed the anticipated
-                        relation L ∝ M^3.5.
-                    </p>
-
-                    <span class="flip-hint">
-                        Hover or click to learn more.
-                    </span>
-
-                </div>
-
+            <div class="name">
+                <a href="index.html">
+                    Milana Berhe
+                    <span class="name-symbols">⋆.˚ ☾⭒.˚</span>
+                </a>
             </div>
 
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="research.html">Research</a>
+                <a href="teaching-mentorship.html">Teaching & Mentorship</a>
+                <a href="extracurriculars.html">Extracurriculars</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="personal.html">Personal</a>
+                <a href="cv.html">CV</a>
+            </div>
 
-            <!-- BACK -->
-            <div class="project-card-back project-card-back-pdf">
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main>
+
+        <!-- =========================
+             PAGE HEADING
+             ========================= -->
+
+        <section class="page-heading">
+
+            <h1>Projects</h1>
+
+            <p>
+                A collection of coding projects I've worked on during my time
+                at UC Berkeley.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECT 1
+             PYTHON DECAL
+             ========================= -->
+
+        <section class="project-section">
+
+            <!-- PINK DESCRIPTION BUBBLE -->
+
+            <div class="activity-box project-description">
 
                 <h2>Python DeCal Final Project</h2>
 
-                <p>
-                    Scroll through my full project write-up below.
+                <p class="activity-role">
+                    Spring 2025
                 </p>
 
-                <div class="project-pdf">
+                <p>
+                    My final project analyzed the mass-luminosity relation
+                    of over 30,000 stars using NASA data.
+                </p>
 
-                    <iframe
-                        src="files/python_decal_final_project.pdf"
-                        title="Python DeCal Final Project PDF">
-                    </iframe>
+                <p>
+                    I found that the line of best fit for the stars closely
+                    followed the anticipated relation L ∝ M<sup>3.5</sup>.
+                </p>
 
-                </div>
+                <p>
+                    You can scroll through my full project write-up below.
+                </p>
 
             </div>
 
-        </div>
 
-    </div>
+            <!-- OPTIONAL PROJECT IMAGE -->
 
-
-
-    <!-- =========================
-         UAS WEBSITE
-         ========================= -->
-
-    <div class="project-card" tabindex="0">
-
-        <div class="project-card-inner">
-
-            <!-- FRONT -->
-            <div class="project-card-front">
+            <div class="project-feature-image">
 
                 <img
-                    src="moon.jpg"
-                    alt="Undergraduate Astronomy Society website"
+                    src="images/decal_project.png"
+                    alt="Python DeCal mass-luminosity project"
                 >
-
-                <div class="project-front-text">
-
-                    <h2>Creating a Website for UAS (2025–2026)</h2>
-
-                    <p>
-                        I created the Undergraduate Astronomy Society's website!
-                    </p>
-
-                    <span class="flip-hint">
-                        Hover or click to learn more.
-                    </span>
-
-                </div>
 
             </div>
 
 
-            <!-- BACK -->
-            <div class="project-card-back">
+            <!-- SCROLLABLE PDF -->
 
-                <h2>Creating a Website for UAS (2025–2026)</h2>
+            <div class="project-pdf-container">
 
-                <p>
-                    During my time as Marketing and Website Development Officer,
-                    I created the current UAS website. It is now managed by
-                    another student, but I built the original structure and design.
-                </p>
+                <iframe
+                    src="files/python_decal_final_project.pdf"
+                    title="Python DeCal Final Project PDF">
+                </iframe>
 
-                <p>
-                    I started completely from scratch, much like this website,
-                    and developed it until it matched the organization's
-                    informational and aesthetic needs.
-                </p>
+            </div>
 
 
-                <!-- WEBSITE PREVIEW LINK -->
+            <!-- BACKUP PDF LINK -->
+
+            <div class="project-buttons">
 
                 <a
-                    href="https://uasberkeley.github.io/"
+                    href="files/python_decal_final_project.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link-preview"
-                >
-
-                    <span class="project-link-title">
-                        Undergraduate Astronomy Society
-                    </span>
-
-                    <span class="project-link-url">
-                        uasberkeley.github.io
-                    </span>
-
-                    <span class="project-link-action">
-                        Visit website ↗
-                    </span>
-
+                    class="project-button">
+                    Open Full PDF ↗
                 </a>
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
 
-</section>
+        <!-- =========================
+             PROJECT 2
+             UAS WEBSITE
+             ========================= -->
+
+        <section class="project-section">
+
+            <!-- PINK DESCRIPTION BUBBLE -->
+
+            <div class="activity-box project-description">
+
+                <h2>Creating a Website for UAS</h2>
+
+                <p class="activity-role">
+                    2025–2026
+                </p>
+
+                <p>
+                    During my time as Marketing and Website Development Officer,
+                    I created the Undergraduate Astronomy Society's website.
+                </p>
+
+                <p>
+                    I started completely from scratch, much like this website,
+                    and built the structure, layout, and overall design until it
+                    matched the organization's informational and aesthetic needs.
+                </p>
+
+                <p>
+                    The site is now managed by another student, but its original
+                    foundation and design were created by me.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT IMAGE -->
+
+            <div class="project-feature-image">
+
+                <img
+                    src="images/moon.jpg"
+                    alt="Undergraduate Astronomy Society website project"
+                >
+
+            </div>
+
+
+            <!-- CLICKABLE WEBSITE PREVIEW -->
+
+            <a
+                href="https://uasberkeley.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="website-preview"
+            >
+
+                <div class="website-preview-text">
+
+                    <span class="website-preview-label">
+                        Website Project
+                    </span>
+
+                    <h3>
+                        Undergraduate Astronomy Society
+                    </h3>
+
+                    <p>
+                        uasberkeley.github.io
+                    </p>
+
+                    <span class="website-preview-action">
+                        Visit website ↗
+                    </span>
+
+                </div>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+        <p>© 2026 Milana Berhe</p>
+    </footer>
+
+</body>
+
+</html>
