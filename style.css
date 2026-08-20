@@ -1090,16 +1090,46 @@ main {
 .project-section {
     width: 100%;
 
-    margin-bottom: 90px;
+    margin-bottom: 70px;
+
+    background-color: var(--pink);
+
+    padding: 34px 38px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 
-/* Pink project bubble */
+/* Project title */
 
-.project-description {
-    width: 100%;
+.project-section h2 {
+    font-size: 30px;
 
-    margin-bottom: 22px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+
+/* Project role / date */
+
+.project-section .activity-role {
+    color: var(--accent);
+
+    font-weight: bold;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+/* Project text */
+
+.project-section p {
+    font-size: 16px;
+
+    line-height: 1.7;
 }
 
 
@@ -1110,9 +1140,11 @@ main {
 .project-feature-image {
     width: 100%;
 
-    margin-bottom: 22px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 
     display: flex;
+
     justify-content: center;
 }
 
@@ -1120,41 +1152,38 @@ main {
 .project-feature-image img {
     display: block;
 
-    width: auto;
+    /* Smaller image */
+    width: 420px;
     max-width: 100%;
 
     height: auto;
-    max-height: 430px;
 
     object-fit: contain;
 
-    border-radius: 18px;
+    border-radius: 16px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
 }
 
 
 /* =========================================
-   PROJECT PDF
+   PROJECT PDF INSIDE PINK BUBBLE
    ========================================= */
 
 .project-pdf-container {
     width: 100%;
 
-    height: 600px;
+    height: 520px;
 
-    margin-top: 20px;
-    margin-bottom: 18px;
+    margin-top: 25px;
 
     background-color: white;
 
-    border: 3px solid #75619b;
+    border: 2px solid #75619b;
 
-    border-radius: 18px;
+    border-radius: 14px;
 
     overflow: hidden;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -1169,24 +1198,19 @@ main {
 
 
 /* =========================================
-   PROJECT BUTTON
+   UAS WEBSITE LINK
    ========================================= */
 
-.project-buttons {
-    display: flex;
-
-    justify-content: center;
-}
-
-
-.project-button {
+.project-link {
     display: inline-block;
 
-    padding: 11px 20px;
+    margin-top: 20px;
+
+    padding: 11px 18px;
 
     background-color: var(--purple);
 
-    border: 3px solid #75619b;
+    border: 2px solid #75619b;
 
     border-radius: 10px;
 
@@ -1200,7 +1224,7 @@ main {
 }
 
 
-.project-button:hover {
+.project-link:hover {
     background-color: var(--blue);
 
     transform: translateY(-2px);
@@ -1208,121 +1232,44 @@ main {
 
 
 /* =========================================
-   WEBSITE PREVIEW
-   ========================================= */
-
-.website-preview {
-    display: block;
-
-    width: 100%;
-
-    margin-top: 20px;
-
-    padding: 30px;
-
-    background-color: var(--pink);
-
-    border: 3px solid #75619b;
-
-    border-radius: 18px;
-
-    color: var(--text);
-
-    text-decoration: none;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease;
-}
-
-
-.website-preview:hover {
-    background-color: var(--purple);
-
-    transform: translateY(-3px);
-}
-
-
-.website-preview-label {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--accent);
-
-    font-size: 14px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-
-.website-preview h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-
-    font-size: 26px;
-}
-
-
-.website-preview p {
-    margin-top: 0;
-    margin-bottom: 15px;
-
-    color: var(--muted-text);
-
-    font-size: 15px;
-}
-
-
-.website-preview-action {
-    font-weight: 700;
-
-    color: #5f4b8b;
-}
-
-
-/* =========================================
-   PROJECTS - TABLET
+   TABLET
    ========================================= */
 
 @media (max-width: 900px) {
 
-    .project-pdf-container {
-        height: 520px;
+    .project-section {
+        padding: 28px;
     }
 
     .project-feature-image img {
-        max-height: 360px;
+        width: 340px;
+    }
+
+    .project-pdf-container {
+        height: 480px;
     }
 
 }
 
 
 /* =========================================
-   PROJECTS - MOBILE
+   MOBILE
    ========================================= */
 
 @media (max-width: 650px) {
 
     .project-section {
-        margin-bottom: 60px;
+        padding: 24px;
+
+        margin-bottom: 50px;
     }
 
     .project-feature-image img {
         width: 100%;
-        max-height: none;
     }
 
     .project-pdf-container {
-        height: 450px;
-    }
-
-    .website-preview {
-        padding: 24px;
+        height: 400px;
     }
 
 }
