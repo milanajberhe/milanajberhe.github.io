@@ -905,285 +905,88 @@ main {
 }
 
 /* =========================================
-   PERSONAL PAGE
-   ========================================= */
-
-.personal-section {
-    width: 100%;
-    margin-bottom: 80px;
-}
-
-
-/* Pink description box */
-
-.personal-description {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   PERSONAL IMAGE GALLERIES
-   ========================================= */
-
-.personal-gallery {
-    display: grid;
-
-    width: 100%;
-
-    gap: 14px;
-
-    align-items: start;
-}
-
-
-/* Two images fill the entire row */
-
-.personal-gallery.two-images {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-
-/* Three images fill the entire row */
-
-.personal-gallery.three-images {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-
-/* =========================================
-   INDIVIDUAL IMAGE
-   ========================================= */
-
-.caption-image {
-    position: relative;
-
-    width: 100%;
-
-    /* NO fixed height */
-    height: auto;
-
-    overflow: hidden;
-
-    border-radius: 16px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-
-/* Show the ENTIRE image */
-
-.caption-image img {
-    display: block;
-
-    width: 100%;
-
-    /* Keeps original proportions */
-    height: auto;
-
-    max-width: 100%;
-
-    object-fit: contain;
-
-    border-radius: 16px;
-
-    transition: transform 0.3s ease;
-}
-
-
-/* =========================================
-   HOVER CAPTION
-   ========================================= */
-
-.image-caption {
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 12px 14px;
-
-    background-color: rgba(45, 35, 65, 0.88);
-
-    color: white;
-
-    font-size: 14px;
-    line-height: 1.4;
-
-    text-align: center;
-
-    opacity: 0;
-
-    transform: translateY(100%);
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-/* Reveal caption on hover */
-
-.caption-image:hover .image-caption {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* Very slight zoom */
-
-.caption-image:hover img {
-    transform: scale(1.02);
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 900px) {
-
-    .personal-gallery {
-        gap: 10px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 650px) {
-
-    .personal-gallery.two-images,
-    .personal-gallery.three-images {
-        grid-template-columns: 1fr;
-    }
-
-    .caption-image {
-        width: 100%;
-    }
-
-    .caption-image img {
-        width: 100%;
-        height: auto;
-    }
-
-
-    /* Phones don't really have hover,
-       so keep captions visible */
-
-    .image-caption {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-
-}
-/* =========================================
    PROJECTS PAGE
    ========================================= */
 
 .project-section {
     width: 100%;
-
-    margin-bottom: 70px;
-
-    background-color: var(--pink);
-
-    padding: 34px 38px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-
-/* Project title */
-
-.project-section h2 {
-    font-size: 30px;
-
-    margin-top: 0;
-    margin-bottom: 6px;
-}
-
-
-/* Project role / date */
-
-.project-section .activity-role {
-    color: var(--accent);
-
-    font-weight: bold;
-
-    margin-top: 0;
-    margin-bottom: 18px;
-}
-
-
-/* Project text */
-
-.project-section p {
-    font-size: 16px;
-
-    line-height: 1.7;
+    margin-bottom: 80px;
 }
 
 
 /* =========================================
-   PROJECT FEATURE IMAGE
+   PROJECT TOP ROW
+   Description left + image right
    ========================================= */
 
-.project-feature-image {
-    width: 100%;
-
-    margin-top: 24px;
-    margin-bottom: 24px;
-
+.project-top-row {
     display: flex;
+    align-items: center;
 
-    justify-content: center;
+    gap: 40px;
+
+    width: 100%;
 }
 
 
-.project-feature-image img {
+/* Description bubble */
+
+.project-description {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+   ========================================= */
+
+.project-side-image {
+    flex: 0 1 38%;
+
+    max-width: 360px;
+
+    width: 100%;
+}
+
+
+.project-side-image img {
     display: block;
 
-    /* Smaller image */
-    width: 420px;
-    max-width: 100%;
-
+    width: 100%;
     height: auto;
+
+    max-width: 100%;
 
     object-fit: contain;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 
 /* =========================================
-   PROJECT PDF INSIDE PINK BUBBLE
+   PDF BELOW PROJECT 1
    ========================================= */
 
 .project-pdf-container {
     width: 100%;
 
-    height: 520px;
+    height: 600px;
 
-    margin-top: 25px;
+    margin-top: 28px;
 
     background-color: white;
 
-    border: 2px solid #75619b;
+    border: 3px solid #75619b;
 
-    border-radius: 14px;
+    border-radius: 18px;
 
     overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -1204,7 +1007,7 @@ main {
 .project-link {
     display: inline-block;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
     padding: 11px 18px;
 
@@ -1237,16 +1040,16 @@ main {
 
 @media (max-width: 900px) {
 
-    .project-section {
-        padding: 28px;
+    .project-top-row {
+        gap: 28px;
     }
 
-    .project-feature-image img {
-        width: 340px;
+    .project-side-image {
+        max-width: 300px;
     }
 
     .project-pdf-container {
-        height: 480px;
+        height: 520px;
     }
 
 }
@@ -1256,20 +1059,29 @@ main {
    MOBILE
    ========================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .project-section {
-        padding: 24px;
+    .project-top-row {
+        flex-direction: column;
 
-        margin-bottom: 50px;
+        align-items: stretch;
+
+        gap: 22px;
     }
 
-    .project-feature-image img {
+    .project-side-image {
+        max-width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .project-side-image img {
         width: 100%;
+        height: auto;
     }
 
     .project-pdf-container {
-        height: 400px;
+        height: 420px;
     }
 
 }
