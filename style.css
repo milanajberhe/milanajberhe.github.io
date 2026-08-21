@@ -945,7 +945,7 @@ main {
 .project-side-image {
     flex: 0 1 38%;
 
-    max-width: 360px;
+    max-width: 200px;
 
     width: 100%;
 }
