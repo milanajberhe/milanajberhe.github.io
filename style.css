@@ -1203,3 +1203,45 @@ header {
 .page-heading p {
     color: white !important;
 }
+
+/* Personal page galleries */
+.personal-gallery {
+    display: grid;
+    gap: 20px;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+.personal-gallery.three-images {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.personal-gallery.two-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.personal-gallery .caption-image {
+    min-width: 0;
+}
+
+.personal-gallery .caption-image img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.personal-gallery .image-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Stack photos on smaller screens */
+@media (max-width: 600px) {
+    .personal-gallery.three-images,
+    .personal-gallery.two-images {
+        grid-template-columns: 1fr;
+    }
+}
