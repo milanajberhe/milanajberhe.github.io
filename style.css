@@ -1204,44 +1204,111 @@ header {
     color: white !important;
 }
 
-/* Personal page galleries */
+
+/* =========================================
+   PERSONAL PAGE GALLERIES
+   ========================================= */
+
+.personal-section {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+/* Pink description bubbles */
+
+.personal-description {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Gallery layout */
+
 .personal-gallery {
     display: grid;
-    gap: 20px;
-    max-width: 900px;
-    margin: 24px auto;
+    width: 100%;
+    gap: 16px;
+    margin: 20px 0;
+    align-items: center;
 }
+
+/* Hiking and Music: 3 images */
 
 .personal-gallery.three-images {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* Art and Cooking: 2 images */
+
 .personal-gallery.two-images {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Individual image containers */
+
 .personal-gallery .caption-image {
+    position: relative;
     min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
 }
+
+/* Image sizing */
 
 .personal-gallery .caption-image img {
     display: block;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 16px;
 }
+
+/* Hover captions */
 
 .personal-gallery .image-caption {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 15px;
+    background: rgba(35, 20, 55, 0.85);
+    color: white;
+
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Stack photos on smaller screens */
+/* Show caption when hovering */
+
+.personal-gallery .caption-image:hover .image-caption,
+.personal-gallery .caption-image:focus-within .image-caption {
+    opacity: 1;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media (max-width: 600px) {
+
     .personal-gallery.three-images,
     .personal-gallery.two-images {
         grid-template-columns: 1fr;
     }
+
+    .personal-gallery .caption-image img {
+        height: auto;
+        max-height: 280px;
+    }
+
+    .personal-gallery .image-caption {
+        position: static;
+        opacity: 1;
+        background: rgba(35, 20, 55, 0.85);
+    }
+
 }
